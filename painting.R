@@ -4,8 +4,8 @@ library(daa.table)
 library(dplyr)
 
 
-my_seed <- runif(1:1000)
-my_seed2 <- runif(1:1000)
+my_seed <- runif(1:10000)
+my_seed2 <- runif(1:10000)
 
 
 x <- my_seed
@@ -22,6 +22,7 @@ data.table::data.table(x = x, y = y, z = z) %>%
   scale_color_viridis_c(na.value = "#440154FF") +
   coord_equal()
 
+ggsave("cotton.png")
 
 data.table::data.table(x = floor(150 * x),
                        y = floor(150 * y),
@@ -33,3 +34,5 @@ data.table::data.table(x = floor(150 * x),
   scale_fill_viridis_c() +
   coord_equal() +
   theme(plot.background = element_rect(fill = '#440154FF'))
+
+ggsave("stars_in_the_sky.png")
