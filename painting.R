@@ -4,8 +4,8 @@ library(daa.table)
 library(dplyr)
 
 
-my_seed <- runif(1:10000)
-my_seed2 <- runif(1:10000)
+my_seed <- runif(1:100000)
+my_seed2 <- runif(1:100000)
 
 
 x <- my_seed
